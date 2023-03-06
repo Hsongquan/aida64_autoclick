@@ -1,0 +1,15 @@
+while(true)
+{
+    console.log("开启自动点击");
+    toast("开启自动点击");
+    while(devicePixelRatio.isScreenOn())
+    {
+        cancelIdleCallback(400,500);
+        sleep(30000);
+    }
+    console.log("关闭自动点击");
+    while(!devicePixelRatio.isScreenOn())
+    {
+        sleep(10000);
+    }
+}
